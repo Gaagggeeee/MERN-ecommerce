@@ -1,0 +1,20 @@
+/* CONTAINER */
+
+.navbar-container
+{
+    padding: .5rem 2rem .5rem 2rem;
+}
+
+.navbar-container p 
+{
+    margin: 0;
+}
+
+
+
+/* CONTENT */
+
+.navbar-cart
+{
+    float: right;
+}

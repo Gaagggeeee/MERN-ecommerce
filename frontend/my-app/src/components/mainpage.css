@@ -1,0 +1,113 @@
+/* CONTAINER */
+
+.mainpage-container
+{
+    background-color: black;
+
+    color: white;
+
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+
+
+/* ROW */
+
+.mainpage-top-row
+{
+    padding-top: .5rem;
+}
+
+.mainpage-shop-title-row
+{
+    padding-top: 2rem;
+}
+
+.mainpage-search-row, .mainpage-filter-row, .mainpage-results-row, .mainpage-featured-row
+{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+
+
+/* COL */
+
+
+
+
+/* CONTENT */
+
+.mainpage-top-title
+{
+    text-transform: uppercase;
+}
+
+
+.mainpage-shop-title
+{
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.mainpage-search
+{
+    text-align: center;
+}
+
+.search-bar
+{
+    width: 100%;
+    height: 2.5rem;
+
+    padding-left: .5rem;
+
+    background: lightgrey;
+}
+
+.mainpage-filter
+{
+    width: 100%;
+
+    border: 1px grey solid;
+
+    padding-left: 2rem;
+    padding-top: 1rem;
+
+    font-weight: 600;
+}
+
+.mainpage-results
+{
+    font-weight: 600;
+}
+
+.mainpage-featured
+{
+    background-color: #1a1a1a;
+
+    border: 1px solid grey;
+
+    font-weight: 600;
+}
+
+.feature-box
+{
+    padding-top: .5rem;
+    padding-left: 1rem;
+}
+
+.gpu-pic
+{
+    text-align: center;
+}
+
+.gpu-pic img
+{
+    width: 15rem;
+}
