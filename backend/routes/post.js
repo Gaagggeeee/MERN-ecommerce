@@ -19,10 +19,5 @@ router.post('/post', async (req, res) => {
     
 });
 
-router.get('/get', async (req, res) => {
-
-    res.send(req.product);
-    product.findbyOne({_id: req.product});
-});
 
 module.exports = router;
