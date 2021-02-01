@@ -5,10 +5,11 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-// Routes
+// Routes POST GET DELETE UPDATE 
 const postRoute = require('./routes/post');
 const getRoute = require('./routes/get');
 const deleteRoute = require('./routes/delete');
+const updateRoute = require('./routes/update');
 
 // Dotenv
 dotenv.config();
@@ -27,6 +28,7 @@ app.use(bodyParser.json());
 app.use('/api', postRoute);
 app.use('/api', getRoute);
 app.use('/api', deleteRoute);
+app.use('/api', updateRoute);
 
 // Port 
 app.listen(3001, () => {

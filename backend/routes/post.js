@@ -12,9 +12,9 @@ router.post('/post', async (req, res) => {
     });
     try {
         const savedProduct = await product.save();
-        res.send({product});
+        res.send({savedproduct});
     } catch (err) {
-        res.status(400).send(err);
+        res.json({ message: err });
     }
     
 });
