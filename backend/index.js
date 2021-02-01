@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 // Routes
 const postRoute = require('./routes/post');
 const getRoute = require('./routes/get');
+const deleteRoute = require('./routes/delete');
 
 // Dotenv
 dotenv.config();
@@ -25,6 +26,7 @@ app.use(bodyParser.json());
 // Route Middleware
 app.use('/api', postRoute);
 app.use('/api', getRoute);
+app.use('/api', deleteRoute);
 
 // Port 
 app.listen(3001, () => {
