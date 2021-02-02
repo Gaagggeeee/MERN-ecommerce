@@ -1,0 +1,60 @@
+/* CONTAINER */
+
+.admin-container
+{
+    padding-top: 2rem;
+}
+
+
+/* CONTENT */
+
+.signin-title-box
+{
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    color: #76b800;
+}
+
+.signin-info
+{
+    text-align: center;
+    
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.signin-username, .signin-password
+{
+    text-align: center;
+
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.signin-input
+{
+    padding: .5rem;
+
+    background: lightgrey;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: .8rem;
+
+    width: 15rem;
+}
+
+
+/* MEDIA QUERY */
+@media only screen and (min-width: 600px)
+{
+    .signin-input
+    {
+        width: 20rem;
+    }
+}
