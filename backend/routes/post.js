@@ -1,5 +1,19 @@
 const router = require('express').Router();
 const Product = require('../models/products');
+const Admin = require('../models/admin');
+
+router.post('/post/admin', async (req, res) => {
+    const admin = new Admin({
+        username: req.body.username,
+        password: req.body.password
+    });
+    try {
+        const savedAdmin = await admin.save();
+        res.send({savedAdmin});
+    } catch (err) {
+        res.json({ message: err });
+    }
+});
 
 router.post('/post', async (req, res) => {
     

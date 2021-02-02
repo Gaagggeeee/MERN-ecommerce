@@ -1,0 +1,37 @@
+/* CONTAINER */
+
+.footer-container
+{
+    background: black;
+
+    padding-top: 2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+
+
+
+
+/* CONTENT */
+
+.product-title-box
+{
+    text-align: center;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    color: #f3f4f5;
+
+    padding-bottom: 1rem;
+
+    border-bottom: grey 1px solid;
+}
+
+.support-box
+{
+    color: #76b800;
+
+    font-weight: 600;
+}
