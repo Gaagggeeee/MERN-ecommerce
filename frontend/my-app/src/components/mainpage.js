@@ -2,8 +2,24 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './mainpage.css';
 import rtx3070 from '../images/rtx3070.png';
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import Product from './product';
 
-function Mainpage() {
+// Actions
+import { getProducts as listProducts } from '../redux/actions/productActions';
+
+const Mainpage = () => {
+
+    const dispatch = useDispatch();
+
+    const getProducts = useSelector((state) => state.getProducts);
+    const { products } = getProducts;
+
+    useEffect(() => {
+        dispatch(listProducts())
+    }, [dispatch]);
+
     return (
         <>
             <Container className='mainpage-container' fluid={true} >
@@ -46,25 +62,28 @@ function Mainpage() {
                         </div>
                     </Col>
                 </Row>
+{/* Featured product row */}
                 <Row className='mainpage-featured-row'>
                     <Col>
-                        <div className='mainpage-featured'>
-                            <div className='feature-box'>
-                                <p>Featured</p>
-                            </div>
-                            <div className='gpu-pic'>
-                                <img src={rtx3070}/>
-                            </div>
-                            <div>
-                                <p>NVIDIA GEFORCE RTX 3070</p>
-                                
-                            </div>
-                        </div>
-                    </Col>
+                            {
+                                products.map((product) => (
+                                <Product 
+                                    key={product._id} 
+                                    productId={product._id} 
+                                    name={product.name}
+                                    cooling={product.cooling}
+                                    boost={product.boost}
+                                    memory={product.memory}
+                                    price={product.price}
+                                /> 
+                                ))
+                            }
+                        <Product />
+                   </Col>
                 </Row>
             </Container>
         </>
     );
-}
+};
 
 export default Mainpage;

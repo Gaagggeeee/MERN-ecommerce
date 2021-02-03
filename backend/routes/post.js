@@ -15,7 +15,7 @@ router.post('/post/admin', async (req, res) => {
     }
 });
 
-router.post('/post', async (req, res) => {
+router.post('/products', async (req, res) => {
     
     const product = new Product({
         name: req.body.name,

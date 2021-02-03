@@ -2,7 +2,7 @@ import * as actionTypes from '../constants/cart';
 
 export const cartReducer = (state = { cartItems : [] }, action) => {
     switch(action.type) {
-        case action.types.ADD_TO_CART:
+        case actionTypes.ADD_TO_CART:
             const item = action.payload;
 
             const existItem = state.cartItems.find((x) => x.product === item.product);
@@ -10,7 +10,7 @@ export const cartReducer = (state = { cartItems : [] }, action) => {
             if(existItem) {
                 return {
                     ...state,
-                    cartItems: state.cartItems.map((x) => x.product === existItems.product ? item : x )
+                    cartItems: state.cartItems.map((x) => x.product === existItem.product ? item : x )
                 }
             } else {
                 return {

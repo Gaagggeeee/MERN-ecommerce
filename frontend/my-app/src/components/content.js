@@ -5,12 +5,13 @@ import AdminPage from './adminpage';
 import Addstock from './addstock';
 
 
+
 function Content() {
     return (
         <>
             <Switch>
                 <Route path='/'>
-                    <Addstock />
+                    <Mainpage />
                 </Route>
                 <Route path='/admin'>
                     <AdminPage />

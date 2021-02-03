@@ -28,11 +28,19 @@
     padding-right: .25rem !important;
 }
 
-.mainpage-filter-row, .mainpage-results-row, .mainpage-featured-row
+.mainpage-filter-row, .mainpage-results-row
 {
     padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.mainpage-featured-row
+{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -113,4 +121,66 @@
 .gpu-pic img
 {
     width: 15rem;
+}
+
+.gpu-info
+{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.gpu-info p 
+{
+    margin: 0;
+}
+
+.info
+{
+    font-weight: 400;
+}
+
+.gpu-price-box
+{
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.add-to-cart-box
+{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.cart-button
+{
+    border: none;
+
+    background: #76b800;
+
+    color: white;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* MEIDA QUERY */
+
+@media only screen and (min-width: 600px)
+{
+    .mainpage-featured
+    {
+        max-width: 40%;
+    }
 }
