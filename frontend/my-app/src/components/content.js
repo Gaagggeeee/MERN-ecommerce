@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Mainpage from './mainpage';
 import AdminPage from './adminpage';
 import Addstock from './addstock';
+import Product from './product';
 
 
 

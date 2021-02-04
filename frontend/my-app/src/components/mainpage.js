@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './mainpage.css';
 import rtx3070 from '../images/rtx3070.png';
-import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import Product from './product';
 
@@ -14,10 +13,10 @@ const Mainpage = () => {
     const dispatch = useDispatch();
 
     const getProducts = useSelector((state) => state.getProducts);
-    const { products } = getProducts;
+    const { products , loading, error } = getProducts;
 
     useEffect(() => {
-        dispatch(listProducts())
+        dispatch(listProducts());
     }, [dispatch]);
 
     return (
@@ -65,8 +64,12 @@ const Mainpage = () => {
 {/* Featured product row */}
                 <Row className='mainpage-featured-row'>
                     <Col>
-                            {
-                                products.map((product) => (
+                        {loading ? (
+                            <h2>Loading...</h2>
+                        ) : error ? (
+                            <h2>{error}</h2>
+                        ) : (
+                            products.map((product) => (
                                 <Product 
                                     key={product._id} 
                                     productId={product._id} 
@@ -76,14 +79,13 @@ const Mainpage = () => {
                                     memory={product.memory}
                                     price={product.price}
                                 /> 
-                                ))
-                            }
-                        <Product />
+                            ))
+                        )}
                    </Col>
                 </Row>
             </Container>
         </>
     );
-};
+}
 
 export default Mainpage;
