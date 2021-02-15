@@ -26,7 +26,7 @@ router.post('/products', async (req, res) => {
     });
     try {
         const savedProduct = await product.save();
-        res.send({savedproduct});
+        res.send({savedProduct});
     } catch (err) {
         res.json({ message: err });
     }
